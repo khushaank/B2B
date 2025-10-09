@@ -1,0 +1,782 @@
+<!-- ==========================================================================
+   B2B Industrial - Clients File
+   ==========================================================================
+   Author: Khushaank Gupta
+   Last Updated: 2025-10-04
+   Description: A clients section for the website @ B2B Industrial Solutions
+   ========================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Our Clients - B2B Industrial Solutions</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="See the leading companies across technology, real estate, hospitality, and finance that trust B2B Industrial Solutions for their critical operational needs."
+    />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="page-header page-header-clients">
+        <div class="container">
+          <h1>Our Valued Clients</h1>
+          <p>Trusted by industry leaders across the nation</p>
+        </div>
+      </section>
+
+      <section class="stats-section fade-in-section">
+        <div class="container">
+          <div class="stat-item">
+            <h3>50+</h3>
+            <p>Major Corporations</p>
+          </div>
+          <div class="stat-item">
+            <h3>10+</h3>
+            <p>Industries Served</p>
+          </div>
+          <div class="stat-item">
+            <h3>98%</h3>
+            <p>Client Retention</p>
+          </div>
+          <div class="stat-item">
+            <h3>15%</h3>
+            <p>Average Cost Savings</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section page-content-section fade-in-section">
+        <div class="container">
+          <div class="main-content">
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="tech">Technology</button>
+              <button class="filter-btn" data-filter="real-estate">
+                Real Estate
+              </button>
+              <button class="filter-btn" data-filter="hospitality">
+                Hospitality
+              </button>
+              <button class="filter-btn" data-filter="finance">Finance</button>
+            </div>
+
+            <div class="logo-grid-container">
+              <div class="logo-card" data-category="tech">
+                <img
+                  src="images/Google.png"
+                  alt="Google Logo"
+                  draggable="false"
+                />
+                <div class="logo-card-overlay"><h6>Google</h6></div>
+              </div>
+              <div class="logo-card" data-category="tech">
+                <img
+                  src="images/Adobe.png"
+                  alt="Adobe Logo"
+                  draggable="false"
+                />
+                <div class="logo-card-overlay"><h6>Adobe</h6></div>
+              </div>
+              <div class="logo-card" data-category="real-estate">
+                <img src="images/DLF.png" alt="DLF Logo" draggable="false" />
+                <div class="logo-card-overlay"><h6>DLF</h6></div>
+              </div>
+              <div class="logo-card" data-category="automotive">
+                <img
+                  src="images/Hyundai.png"
+                  alt="Hyundai Logo"
+                  draggable="false"
+                />
+                <div class="logo-card-overlay"><h6>Hyundai</h6></div>
+              </div>
+              <div class="logo-card" data-category="tech">
+                <img src="images/Sony.png" alt="Sony Logo" draggable="false" />
+                <div class="logo-card-overlay"><h6>Sony</h6></div>
+              </div>
+              <div class="logo-card" data-category="hospitality">
+                <img
+                  src="images/Radisson.png"
+                  alt="Radisson Logo"
+                  draggable="false"
+                />
+                <div class="logo-card-overlay"><h6>Radisson</h6></div>
+              </div>
+              <div class="logo-card" data-category="finance">
+                <img src="images/PNB.png" alt="PNB Logo" draggable="false" />
+                <div class="logo-card-overlay"><h6>PNB</h6></div>
+              </div>
+
+              <div class="logo-card-trigger" id="openClientsModal">
+                <h6>View All Clients</h6>
+                <p>Click to see our full client list</p>
+              </div>
+            </div>
+          </div>
+          <aside class="sidebar">
+            <div class="quote-form">
+              <h4>Become a Client</h4>
+              <form>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  required
+                  aria-label="Your Name"
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email / Phone number"
+                  required
+                  aria-label="Your Email or Phone number"
+                />
+                <textarea
+                  placeholder="How can we help you?"
+                  rows="4"
+                  aria-label="Your inquiry message"
+                ></textarea>
+                <button type="submit" class="btn-primary">
+                  Submit Inquiry
+                </button>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div id="clientsModal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal-btn" aria-label="Close modal">
+          &times;
+        </button>
+        <h2>Our Other Valued Clients</h2>
+
+        <div class="search-bar-container">
+          <i class="fas fa-search"></i>
+          <input
+            type="search"
+            id="clientSearch"
+            placeholder="Search for a client or category..."
+            aria-label="Search clients"
+          />
+        </div>
+
+        <div class="logo-grid-container modal-grid">
+          <div class="logo-card" data-category="tech">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Adobe.png"
+              alt="Adobe Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Adobe</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Aerocity.png"
+              alt="Aerocity Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Aerocity</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/AMB.png"
+              alt="AMB Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>AMB</h6></div>
+          </div>
+          <div class="logo-card" data-category="education">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Amity-University.jpg"
+              alt="Amity University Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Amity University</h6></div>
+          </div>
+          <div class="logo-card" data-category="manufacturing">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Atlas-Cycles.png"
+              alt="Atlas Cycles Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Atlas Cycles</h6></div>
+          </div>
+          <div class="logo-card" data-category="ecommerce">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Atomy.png"
+              alt="Atomy Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Atomy</h6></div>
+          </div>
+          <div class="logo-card" data-category="manufacturing">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Blue-Star.png"
+              alt="Blue Star Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Blue Star</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Camellias.jpg"
+              alt="Camellias Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Camellias</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/CBRE.png"
+              alt="CBRE Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>CBRE</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="https://b2bindustrial.in/wp-content/uploads/2025/09/Cushman-Wakefield.png"
+              alt="Cushman & Wakefield Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Cushman & Wakefield</h6></div>
+          </div>
+          <div class="logo-card" data-category="fitness">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/cult-fit.png"
+              alt="Cult Fit Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Cult Fit</h6></div>
+          </div>
+          <div class="logo-card" data-category="food">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Dawat.png"
+              alt="Dawat Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Dawat</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/DLF.png"
+              alt="DLF Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>DLF</h6></div>
+          </div>
+          <div class="logo-card" data-category="non-profit">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Drishti_Logo.jpg"
+              alt="Drishti Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Drishti</h6></div>
+          </div>
+          <div class="logo-card" data-category="tech">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Exicom.jpg"
+              alt="Exicom Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Exicom</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Experion.png"
+              alt="Experion Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Experion</h6></div>
+          </div>
+          <div class="logo-card" data-category="association">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/FSAI.png"
+              alt="FSAI Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>FSAI</h6></div>
+          </div>
+          <div class="logo-card" data-category="government">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/GEM.png"
+              alt="GEM Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>GEM</h6></div>
+          </div>
+          <div class="logo-card" data-category="infrastructure">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/GMR.png"
+              alt="GMR Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>GMR</h6></div>
+          </div>
+          <div class="logo-card" data-category="tech">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Google.png"
+              alt="Google Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Google</h6></div>
+          </div>
+          <div class="logo-card" data-category="ecommerce">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Grofers.png"
+              alt="Grofers Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Grofers</h6></div>
+          </div>
+          <div class="logo-card" data-category="tech">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Harman.png"
+              alt="Harman Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Harman</h6></div>
+          </div>
+          <div class="logo-card" data-category="ecommerce">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/healthkart.png"
+              alt="Healthkart Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Healthkart</h6></div>
+          </div>
+          <div class="logo-card" data-category="automotive">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Hero.png"
+              alt="Hero Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Hero</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Hines.png"
+              alt="Hines Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Hines</h6></div>
+          </div>
+          <div class="logo-card" data-category="automotive">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Hyundai.png"
+              alt="Hyundai Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Hyundai</h6></div>
+          </div>
+          <div class="logo-card" data-category="association">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/ISHARE.png"
+              alt="ISHARE Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>ISHARE</h6></div>
+          </div>
+          <div class="logo-card" data-category="certification">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/ISO-2015.png"
+              alt="ISO 2015 Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>ISO 2015</h6></div>
+          </div>
+          <div class="logo-card" data-category="energy">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Jakson.jpg"
+              alt="Jakson Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Jakson</h6></div>
+          </div>
+          <div class="logo-card" data-category="energy">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Jakson.png"
+              alt="Jakson Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Jakson</h6></div>
+          </div>
+          <div class="logo-card" data-category="tech">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/JBL.png"
+              alt="JBL Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>JBL</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/JLL.png"
+              alt="JLL Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>JLL</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Mailbu-Town.jpg"
+              alt="Mailbu Town Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Mailbu Town</h6></div>
+          </div>
+          <div class="logo-card" data-category="finance">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Manappuram.png"
+              alt="Manappuram Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Manappuram</h6></div>
+          </div>
+          <div class="logo-card" data-category="manufacturing">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/markem-imaje.png"
+              alt="Marken Imaje Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Marken Imaje</h6></div>
+          </div>
+          <div class="logo-card" data-category="healthcare">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Medtronic.png"
+              alt="Medtronic Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Medtronic</h6></div>
+          </div>
+          <div class="logo-card" data-category="ecommerce">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/moglix.png"
+              alt="Moglix Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Moglix</h6></div>
+          </div>
+          <div class="logo-card" data-category="consulting">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/MYND.png"
+              alt="MYND Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>MYND</h6></div>
+          </div>
+          <div class="logo-card" data-category="manufacturing">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/mystair.png"
+              alt="Mystair Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Mystair</h6></div>
+          </div>
+          <div class="logo-card" data-category="tech">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/nagarro.png"
+              alt="Nagarro Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Nagarro</h6></div>
+          </div>
+          <div class="logo-card" data-category="consulting">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Onquest.png"
+              alt="Onquest Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Onquest</h6></div>
+          </div>
+          <div class="logo-card" data-category="healthcare">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Optum.png"
+              alt="Optum Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Optum</h6></div>
+          </div>
+          <div class="logo-card" data-category="finance">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/PNB.png"
+              alt="PNB Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>PNB</h6></div>
+          </div>
+          <div class="logo-card" data-category="manufacturing">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Proterial.png"
+              alt="Proterial Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Proterial</h6></div>
+          </div>
+          <div class="logo-card" data-category="hospitality">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Radisson.png"
+              alt="Radisson Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Radisson</h6></div>
+          </div>
+          <div class="logo-card" data-category="consulting">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Ras.png"
+              alt="Ras Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Ras</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Regal-GARDENS.jpg"
+              alt="Regal Gardens Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Regal Gardens</h6></div>
+          </div>
+          <div class="logo-card" data-category="tech">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Sapient.png"
+              alt="Sapient Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Sapient</h6></div>
+          </div>
+          <div class="logo-card" data-category="consulting">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Sila.png"
+              alt="Sila Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Sila</h6></div>
+          </div>
+          <div class="logo-card" data-category="tech">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Sony.png"
+              alt="Sony Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Sony</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="https://b2bindustrial.in/wp-content/uploads/2025/09/The-Guardian-logo-scaled.png"
+              alt="The Guardians Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>The Guardians</h6></div>
+          </div>
+          <div class="logo-card" data-category="media">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/ticketmaster.png"
+              alt="Ticketmaster Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Ticketmaster</h6></div>
+          </div>
+          <div class="logo-card" data-category="tech">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Toshiba.png"
+              alt="Toshiba Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Toshiba</h6></div>
+          </div>
+          <div class="logo-card" data-category="certification">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/TUV-Sud.png"
+              alt="TUV Sud Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>TUV Sud</h6></div>
+          </div>
+          <div class="logo-card" data-category="government">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Udyam.webp"
+              alt="Udyam Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Udyam</h6></div>
+          </div>
+          <div class="logo-card" data-category="finance">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Union-Bank.png"
+              alt="Union Bank Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Union Bank</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Uniworlds.png"
+              alt="Uniworlds Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Uniworlds</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Vatika.jpg"
+              alt="Vatika Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Vatika</h6></div>
+          </div>
+          <div class="logo-card" data-category="real-estate">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Vipul-Greens.jpg"
+              alt="Vipul Greens Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Vipul Greens</h6></div>
+          </div>
+          <div class="logo-card" data-category="media">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Wunderman-Thompson.png"
+              alt="Wunderman Thompson Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Wunderman Thompson</h6></div>
+          </div>
+          <div class="logo-card" data-category="travel">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Yatra_logo.svg_.png"
+              alt="Yatra Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Yatra</h6></div>
+          </div>
+          <div class="logo-card" data-category="automotive">
+            <img
+              src="http://b2bindustrial.in/wp-content/uploads/2025/09/Yokohama.png"
+              alt="Yokohama Logo"
+              draggable="false"
+            />
+            <div class="logo-card-overlay"><h6>Yokohama</h6></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Optimize Your Operations?</h2>
+        <p>
+          Let's discuss how B2B Industrial Solutions can drive efficiency,
+          ensure compliance, and reduce costs for your business.
+        </p>
+        <a href="contact.html" class="btn-primary btn-cta"
+          >Get a Free Consultation</a
+        >
+      </div>
+    </section>
+
+    <section class="section philosophy-section fade-in-section">
+      <div class="container">
+        <div class="container-grid">
+          <div class="philosophy-text">
+            <h2>Our Guiding Philosophy</h2>
+            <p>
+              We believe in building lasting partnerships, not just completing
+              transactions. Our approach is founded on a deep understanding of
+              our clients' unique operational challenges and a relentless
+              pursuit of sustainable, efficient solutions.
+            </p>
+            <p>
+              By integrating cutting-edge technology with practical,
+              on-the-ground expertise, we empower our clients to not only meet
+              but exceed their industry's standards for safety, compliance, and
+              performance.
+            </p>
+          </div>
+          <div class="philosophy-founder">
+            <div class="founder-image">
+              <img
+                src="images/founder.jpg"
+                alt="Founder of B2B Industrial Solutions"
+              />
+            </div>
+            <div class="founder-text">
+              <p class="quote">
+                "Our goal isn't just to be a vendor; it's to be the trusted
+                backbone of our clients' industrial operations. Their success is
+                the ultimate measure of our own."
+              </p>
+              <p class="name">Sandeep Gupta</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials-section fade-in-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Our Clients Say</h2>
+          <p>Real feedback from partners who trust our solutions.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <blockquote>
+              B2B Industrial's energy audit was a game-changer for our facility.
+              Their team was professional, thorough, and their recommendations
+              have already led to a 15% reduction in our energy costs. We
+              couldn't be more pleased.
+            </blockquote>
+            <p class="testimonial-author">
+              &mdash; Ankit Sharma, Facility Manager at DLF Cyber City
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <blockquote>
+              The compliance management service is invaluable. B2B keeps us on
+              track with all regulations, giving us complete peace of mind.
+              Their proactive approach has saved us significant time and
+              potential legal headaches.
+            </blockquote>
+            <p class="testimonial-author">
+              &mdash; Priya Singh, Operations Head at Radisson Hotels
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script defer src="js/loader.js"></script>
+    <script defer src="js/script.js"></script>
+    <script>
+      window.chtlConfig = { chatbotId: "5288477777" };
+    </script>
+    <script
+      async
+      data-id="5288477777"
+      id="chtl-script"
+      type="text/javascript"
+      src="https://chatling.ai/js/embed.js"
+    ></script>
+  </body>
+</html>
+<!-- ==========================================================================
+   B2B Industrial - Clients File
+   ========================================================================== -->

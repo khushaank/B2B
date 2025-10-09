@@ -1,0 +1,441 @@
+/* ==========================================================================
+   1. Header Styles
+   ========================================================================== */
+:root {
+  --primary-blue: #0a3d62;
+  --primary-green: #007634;
+  --white: #fff;
+  --dark-text: #222;
+  --background-light: #f8f8f8;
+}
+
+body {
+  padding-top: calc(15px + 55px + 8px);
+}
+
+.site-header {
+  position: fixed; /* change from sticky */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  padding: 15px 0;
+  z-index: 5000; /* ensure it's above everything */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 55px;
+}
+
+/* --- Desktop Navigation --- */
+.main-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: var(--dark-text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-green);
+  transition: width 0.3s ease;
+}
+
+.nav-links > li.active > a {
+  color: var(--primary-green);
+}
+
+.nav-links > li.active > a::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--primary-green);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* CHANGED: This closes the gap */
+  left: -20px;
+  background: var(--white);
+  list-style: none;
+  min-width: 280px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 15px 0 10px 0; /* ADDED: Padding for spacing instead of a gap */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--dark-text);
+}
+
+.dropdown-menu a::after {
+  display: none;
+}
+
+.cta-button {
+  margin-left: 30px;
+}
+
+/* Hamburger Icon */
+.mobile-nav-toggle {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1002;
+  border: none;
+  background: transparent;
+}
+
+.mobile-nav-toggle span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--dark-text);
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.mobile-nav-toggle span:nth-child(1) {
+  top: 0;
+}
+.mobile-nav-toggle span:nth-child(2) {
+  top: 9px;
+}
+.mobile-nav-toggle span:nth-child(3) {
+  top: 18px;
+}
+
+.mobile-nav-toggle.active span:nth-child(1) {
+  top: 9px;
+  transform: rotate(135deg);
+}
+.mobile-nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+.mobile-nav-toggle.active span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-135deg);
+}
+
+/* =========================
+     Responsive Header
+     ========================= */
+@media (max-width: 1024px) {
+  .main-nav,
+  .cta-button {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    max-width: 80%;
+    height: 100%;
+    background: var(--white);
+    z-index: 3999;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .main-nav.active {
+    transform: translateX(0);
+  }
+
+  .main-nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 70px 0 20px 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .main-nav .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .main-nav .nav-links li > a {
+    display: block;
+    padding: 15px 20px;
+  }
+
+  .main-nav .nav-links li.active > a {
+    background-color: var(--background-light);
+  }
+
+  /* Mobile dropdowns */
+  .dropdown-menu {
+    display: none;
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    background: var(--background-light);
+    padding: 5px 0 10px 35px;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  /* Mobile overlay */
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 3998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+  }
+
+  body.nav-open .nav-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+/* Ensure footer grows with content */
+.site-footer {
+  background-color: var(--primary-blue);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 60px 20px 20px;
+  width: 100%;
+  display: block;
+}
+
+/* Footer grid adapts to content height */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  align-items: start; /* ensures columns align from the top */
+}
+
+/* Allow footer items to wrap nicely */
+.footer-column {
+  min-width: 0; /* fix overflow issues */
+  word-break: break-word;
+}
+
+.footer-column .footer-logo {
+  max-width: 160px;
+  margin-bottom: 20px;
+}
+
+.footer-column p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Headings */
+.footer-column h6 {
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-column h6::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary-green);
+}
+
+/* Links */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-column li > span,
+.footer-column li > a {
+  flex: 1;
+  word-break: break-word;
+}
+
+.footer-column a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul a:hover {
+  color: var(--primary-green);
+}
+
+/* Icons */
+.footer-column ul .fa,
+.footer-column ul .fas {
+  margin-right: 12px;
+  margin-top: 4px;
+  width: 15px;
+  text-align: center;
+  color: var(--primary-green);
+}
+
+/* Social Links */
+.footer-column .social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-column .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  transition: background-color 0.3s ease;
+}
+
+.footer-column .social-links a:hover {
+  background-color: var(--primary-green);
+}
+
+/* Copyright */
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.copyright p {
+  margin: 0;
+}
+
+/* ==========================================================================
+     Responsive Footer Styles
+     ========================================================================== */
+
+/* --- Tablet View --- */
+@media (max-width: 992px) {
+  .site-footer {
+    padding: 50px 20px 20px;
+  }
+  .footer-grid {
+    gap: 30px;
+  }
+}
+
+/* --- Mobile View --- */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 15px 15px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+
+  .footer-column h6 {
+    font-size: 1rem;
+  }
+
+  .footer-column p,
+  .footer-column li {
+    font-size: 0.9rem;
+  }
+}
